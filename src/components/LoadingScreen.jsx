@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Logo from "../assets/logoapp.png";
+import Logo from "../assets/logoapp2.png";
 
 export default function LoadingScreen({ onFinish }) {
   const [progress, setProgress] = useState(0);
@@ -17,7 +17,7 @@ export default function LoadingScreen({ onFinish }) {
   }, [progress, onFinish]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-screen bg-black text-white text-center">
+    <div className="flex flex-col items-center justify-center h-screen w-screen bg-black text-white text-center space-y-6">
       {/* Logo animado */}
       <motion.img
         src={Logo}
@@ -25,20 +25,21 @@ export default function LoadingScreen({ onFinish }) {
         initial={{ scale: 0, rotate: -180 }}
         animate={{ scale: 1, rotate: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="w-32 h-32 mb-6 object-contain mx-auto"
+        className="w-[70vw] max-w-[600px] object-contain mx-auto"
       />
 
       {/* Barra de carga */}
-      <div className="w-64 bg-gray-700 rounded-full h-4 overflow-hidden">
+      <div className="w-[20vw] max-w-[100px] bg-gray-700 rounded-full overflow-hidden">
         <motion.div
-          className="bg-green-400 h-4 rounded-full"
+          className="bg-green-400 h-3 rounded-full"
           initial={{ width: "0%" }}
           animate={{ width: `${progress}%` }}
           transition={{ duration: 0.2 }}
         />
       </div>
 
-      <p className="mt-4 text-lg">Cargando... {progress}%</p>
+      {/* Texto */}
+      <p className="text-[1vw] max-text-lg">Cargando... {progress}%</p>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import LoadingScreen from "./components/LoadingScreen";
-import Logo from "./assets/logoapp.png"; 
+import Logo from "./assets/logoapp2.png"; 
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -18,12 +18,12 @@ function App() {
         alt="Logo"
         className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
         initial={{
-          scale: 1  ,
+          scale: 0.5  ,
 	        }}
         animate={{
-          x: "calc(49vw - 2rem)",
-          y: "calc(-49vh + 2rem)", 
-          scale: 0.1   
+          x: "calc(48vw - 2rem)",
+          y: "calc(-47vh + 2rem)", 
+          scale: 0.099  
         }}
         transition={{ duration: 1.2 }}
       />

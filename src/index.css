@@ -29,6 +29,10 @@ a:hover {
 
 body {
   margin: 0;
+background-image: url('./assets/fondo6.png');
+  background-size: cover;      /* la imagen cubre toda la pantalla */
+  background-position: center; /* la centra */
+  background-repeat: no-repeat;/* evita repeticiones */
   display: flex;
   place-items: center;
   min-width: 320px;
