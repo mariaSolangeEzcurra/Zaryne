@@ -29,15 +29,21 @@ a:hover {
 
 body {
   margin: 0;
-background-image: url('./assets/fondo6.png');
-  background-size: cover;      /* la imagen cubre toda la pantalla */
-  background-position: center; /* la centra */
-  background-repeat: no-repeat;/* evita repeticiones */
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  place-items: center;
+
+  background: url('./assets/fondo8.png') no-repeat center center;
+  background-size: cover;
+  animation: zoomFondo 5s ease-in-out infinite alternate;
 }
+
+@keyframes zoomFondo {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+
 
 h1 {
   font-size: 3.2em;

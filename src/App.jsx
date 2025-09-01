@@ -21,15 +21,15 @@ function App() {
           scale: 0.5  ,
 	        }}
         animate={{
-          x: "calc(48vw - 2rem)",
-          y: "calc(-47vh + 2rem)", 
-          scale: 0.099  
+          x: "calc(46vw - 2rem)",
+          y: "calc(-44vh + 2rem)", 
+          scale: 0.15  
         }}
         transition={{ duration: 1.2 }}
       />
       {/* Contenido */}
       <div className="flex items-center justify-center h-full text-white text-3xl">
-        Elegir cuenta creo
+        Jueguito
       </div>
     </div>
   );
